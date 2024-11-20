@@ -1,0 +1,65 @@
+.sauces-list-item {
+  $self: &;
+
+  cursor: pointer;
+
+  &:hover {
+    #{$self}__input:not(#{$self}__input--checked):not(#{$self}__input--disabled) + #{$self}__name {
+      &:before {
+        border-color: $purple-800;
+      }
+    }
+  }
+
+  &__name {
+    @include r-s16-h19;
+
+    position: relative;
+
+    padding-left: 28px;
+
+    &:before {
+      @include p_center-v;
+
+      display: block;
+
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+
+      content: "";
+      transition: 0.3s;
+
+      border: 1px solid $purple-400;
+      border-radius: 50%;
+      background-color: $white;
+    }
+  }
+
+  &__input {
+    display: none;
+
+    &--checked {
+      & + #{$self}__name {
+        &:before {
+          border: 6px solid $green-500;
+        }
+      }
+    }
+
+    &--disabled {
+      & + #{$self}__name {
+        &:before {
+          border-color: $purple-400;
+          background-color: $silver-200;
+        }
+      }
+
+      &#{$self}--checked + #{$self}__name {
+        &:before {
+          border: 6px solid $purple-400;
+        }
+      }
+    }
+  }
+}

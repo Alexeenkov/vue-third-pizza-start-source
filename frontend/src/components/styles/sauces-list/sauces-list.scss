@@ -1,0 +1,18 @@
+.sauces-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  p {
+    @include r-s16-h19;
+
+    margin-top: 0;
+    margin-right: 16px;
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    margin-right: 24px;
+    margin-bottom: 10px;
+  }
+}

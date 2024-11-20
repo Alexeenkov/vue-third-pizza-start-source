@@ -1,0 +1,25 @@
+.filling-list {
+  width: 100%;
+
+  p {
+    @include r-s16-h19;
+
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  &__items {
+    @include clear-list;
+
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 100px;
+    min-height: 40px;
+    margin-right: 17px;
+    margin-bottom: 35px;
+  }
+}

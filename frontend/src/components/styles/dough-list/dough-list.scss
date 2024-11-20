@@ -1,0 +1,14 @@
+.dough-list {
+  &__items {
+    flex-wrap: nowrap;
+  }
+
+  &__input {
+    position: relative;
+
+    margin-right: 8%;
+    margin-bottom: 20px;
+
+    cursor: pointer;
+  }
+}

@@ -1,4 +1,4 @@
-export default {
+export const FILLINGS = {
   1: "mushrooms",
   2: "cheddar",
   3: "salami",
